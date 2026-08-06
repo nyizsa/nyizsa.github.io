@@ -18,12 +18,12 @@ A vezetés és irányítás geoinformációs támogatása nyílt térinformatika
 
 <details>
 
-<summary>Az orosz és az ukrán légi műveletek tapasztalatai</summary>
+<summary><h3>Az orosz és az ukrán légi műveletek tapasztalatai</h3></summary>
 
-**Honvédségi Szemle**
+<bold>Honvédségi Szemle</bold>
 
 154. évfolyam, 2026/2. szám, 64-74. oldal
 
-https://kiadvany.magyarhonvedseg.hu/honvedsegi-szemle/viewer.html?file=pdfs/112_111.pdf
+<https://kiadvany.magyarhonvedseg.hu/honvedsegi-szemle/viewer.html?file=pdfs/112_111.pdf>
 
 </details>
