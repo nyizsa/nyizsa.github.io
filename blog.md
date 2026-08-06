@@ -1,3 +1,3 @@
 # Blogbejegyzések
 
-Egy. 
+Egy.
