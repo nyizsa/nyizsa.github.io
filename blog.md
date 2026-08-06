@@ -2,4 +2,4 @@
 
 Egy.
 
-Kettő. 
+Kettő.
