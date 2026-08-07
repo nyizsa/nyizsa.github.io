@@ -5,8 +5,16 @@ body {
 
 .header {
     background-color: #280003;
-    color: #848586;
+    color: #c8ffc8;
     text-align: center;
-    height: 128px;
+    font-size: 200%;
 }
-/* 280003, 848586, c2847a */
+
+.nav {
+    float: left;
+}
+
+.thispage {
+    background-color: #280003;
+}
+/* c2847a */
