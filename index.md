@@ -2,8 +2,6 @@
 layout: default
 title: Nyizsa Github oldala
 ---
-# Nyizsnyik Ferenc Github oldala
-
 Nyizsnyik Ferenc vagyok, a Nemzeti Közszolgálati Egyetem Katonai Műszaki Doktori Iskola doktorandusz hallgatója.
 
 ## Témavezető
