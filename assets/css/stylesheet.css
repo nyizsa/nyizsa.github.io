@@ -27,12 +27,18 @@ body {
 .nav > p {
     font-style: bold;
     font-size: 141%;
-    color: #c8ffc8;
     text-align: right;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    width: 64px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-right: 0px;
+    margin-left: 50%;
+}
+
+.nav > p > a {
+    color: #c8ffc8;
 }
 
 .thispage {
