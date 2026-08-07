@@ -24,8 +24,15 @@ body {
     float: left;
 }
 
-.nav > a {
-    font-style: italic;
+.nav > p {
+    font-style: bold;
+    font-size: 141%;
+    color: #c8ffc8;
+    text-align: right;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .thispage {
