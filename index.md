@@ -4,17 +4,17 @@ title: Nyizsa Github oldala
 ---
 Nyizsnyik Ferenc vagyok, a Nemzeti Közszolgálati Egyetem Katonai Műszaki Doktori Iskola doktorandusz hallgatója.
 
-## Témavezető
+# Témavezető
 
 Dr. Kállai Attila e. docens
 
-## Kutatási téma
+# Kutatási téma
 
 A vezetés és irányítás geoinformációs támogatása nyílt térinformatikai platformokon
 
-## Publikációk
+# Publikációk
 
-### Az orosz és az ukrán légi műveletek tapasztalatai
+## Az orosz és az ukrán légi műveletek tapasztalatai
 
 > **Honvédségi Szemle**
 

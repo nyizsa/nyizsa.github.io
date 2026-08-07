@@ -7,11 +7,20 @@ body {
     background-color: #280003;
     color: #c8ffc8;
     text-align: center;
+}
+
+.header > h1 {
+    padding-top: 64px;
+    padding-bottom: 64px;
     font-size: 200%;
 }
 
 .nav {
     float: left;
+}
+
+.nav > p {
+    font-style: italic;
 }
 
 .thispage {
