@@ -12,14 +12,14 @@ body {
 .header > h1 {
     padding-top: 64px;
     padding-bottom: 64px;
-    font-size: 200%;
+    font-size: 400%;
 }
 
 .nav {
     float: left;
 }
 
-.nav > p {
+.nav > a {
     font-style: italic;
 }
 
