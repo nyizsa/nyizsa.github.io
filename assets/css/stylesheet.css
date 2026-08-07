@@ -25,6 +25,8 @@ body {
 }
 
 .nav > p {
+    background-color: #280003;
+    color: #c2847a;
     font-style: bold;
     font-size: 141%;
     text-align: right;
@@ -44,4 +46,3 @@ body {
 .thispage {
     background-color: #280003;
 }
-/* c2847a */
