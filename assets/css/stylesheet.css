@@ -29,7 +29,7 @@ body {
 }
 
 .nav > p {
-    background-color: #c2847a;
+    background-color: #280003;
     font-style: bold;
     font-size: 141%;
     text-align: right;
@@ -48,5 +48,5 @@ body {
 }
 
 .thispage {
-    background-color: #280003;
+    color: #280003;
 }
