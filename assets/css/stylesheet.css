@@ -7,6 +7,10 @@ body {
     background-color: #280003;
     color: #c8ffc8;
     text-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 32px;
 }
 
 .header > h1 {
@@ -25,8 +29,7 @@ body {
 }
 
 .nav > p {
-    background-color: #280003;
-    color: #c2847a;
+    background-color: #c2847a;
     font-style: bold;
     font-size: 141%;
     text-align: right;
@@ -40,7 +43,8 @@ body {
 }
 
 .nav > p > a {
-    color: #c8ffc8;
+    color: #c2847a;
+    text-decoration: none;
 }
 
 .thispage {
