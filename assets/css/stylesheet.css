@@ -30,7 +30,6 @@ body {
 
 .nav > p {
     background-color: #280003;
-    font-style: bold;
     font-size: 141%;
     text-align: right;
     width: 64px;
@@ -44,9 +43,10 @@ body {
 
 .nav > p > a {
     color: #c2847a;
+    font-style: bold;
     text-decoration: none;
 }
 
 .thispage {
-    color: #280003;
+    font-style: italic;
 }
