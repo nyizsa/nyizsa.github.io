@@ -61,6 +61,11 @@ body {
     font-style: italic;
 }
 
+pre {
+    overflow-x: auto;
+    white-space: pre;
+}
+
 .na, .pi {
     font-style: bold;
     color: #9000ff;
