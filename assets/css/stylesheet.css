@@ -61,7 +61,7 @@ body {
     font-style: italic;
 }
 
-.na .pi {
+.na, .pi {
     font-style: bold;
     color: #9000ff;
 }
