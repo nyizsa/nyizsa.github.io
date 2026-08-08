@@ -38,6 +38,7 @@ body {
 
 .nav > p {
     background-color: #280003;
+    transform: skew(15deg);
     font-size: 141%;
     text-align: right;
     width: 50%;
