@@ -1,11 +1,13 @@
 html {
     margin: 0px;
+    padding: 0px;
 }
 
 body {
     background-color: #c8ffc8;
     color: #141204;
     margin: 0px;
+    padding: 0px;
 }
 
 .header {
@@ -38,9 +40,9 @@ body {
     background-color: #280003;
     font-size: 141%;
     text-align: right;
-    width: 15%;
-    padding-left: 5%;
-    padding-right: 5%;
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 10%;
     padding-top: 4px;
     padding-bottom: 4px;
     margin-right: 0px;
