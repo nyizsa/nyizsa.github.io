@@ -6,7 +6,7 @@ A [Github](https://github.com) egy nagyon hasznos eszköz azoknak, akik szoftver
 
 De mi a helyzet azokkal, akiknek Microsoft Word formátumban kell dokumentációt előállítaniuk? A Google találatai alapján már másoknak is eszébe jutott, hogy a Githubon lehetne .docx formátumú állományokat verziókezelni, illetve azokon csoportban dolgozni. (Szerintem mindenkiben fölmerül valami hasonló igény, amikor a Munka_vegleges_javitott_4_utolso.docx állományt elküldi e-mailen.)
 
-A legtöbb válasz a fönti kérdésre az, hogy természetesen lehet .docx állományokat hostolni a Githubon, de a verziókezelés nagyjából értelmét veszti, mivel a .docx egy bináris formátum (vagyis tulajdonképpen egy Zippel tömörített adathalmaz), így a diffek értelmüket veszítik.
+A keresés a legtöbb találat esetén azt az eredményt adja, hogy természetesen lehet .docx állományokat hostolni a Githubon, de a verziókezelés nagyjából értelmét veszti, mivel a .docx egy bináris formátum (vagyis tulajdonképpen egy Zippel tömörített adathalmaz), így a diffek értelmüket veszítik.
 
 Volt még olyan javaslat is, hogy az állományt kitömörítve töltsük föl, és használat előtt be kell tömöríteni, majd megint ki. Ez talán járható lenne, de szükségtelenül túlbonyolítja a használatot.
 
@@ -14,7 +14,7 @@ Akkor mégis mi a megoldás? A Github szöveges állományok tárolására jött
 
 De hogy lesz ebből Word dokumentum? Szerencsére a Github nem csak a verziókezeléshez, hanem a CI/CD munkamenethez is tartalmaz hasznos segédeszközöket. A különféle fordítók mellett a [Pandoc](https://pandoc.org) is rendelkezésre áll. Vagyis elég egy munkafolyamatot létrehozni, az pedig gondoskodik minden szükséges lépésről.
 
-A dokumentum neve a példában `document.md` lesz. Ebbe lehet írni a feladatot, a Markdown szintaxisnak megfelelően. Erre bármelyik szövegszerkesztő megfelel, de hasznos, ha a Git integrálva van a programba. Én a [Kate](https://kate-editor.org/)-t használom. Számozással, formázással nem kell törődni, a szerző koncentráljon a tartalomra! Ha elkészült a mű (vagy csak kíváncsiak vagyunk, hogy haladunk), egyszerűen generáltassuk a dokumentumot! Ehhez kell egy Action.
+A dokumentum neve a példában `document.md` lesz. Ebbe lehet írni a feladatot, a Markdown szintaxisnak megfelelően. Erre bármelyik szövegszerkesztő megfelel, de hasznos, ha a Git integrálva van a programba. Én a [Kate](https://kate-editor.org/)-t használom. Számozással, formázással nem kell törődni, a szerző koncentráljon a tartalomra! Ha elkészült a mű (vagy csak kíváncsiak vagyunk, hogy haladunk), egyszerűen generáltassuk a dokumentumot! Ehhez kell egy [Action](https://github.com/features/actions).
 
 ### Új Github Action létrehozása
 
@@ -47,7 +47,7 @@ jobs:
 
 Az `on: workflow_dispatch` sor az indítás feltételét határozza meg. Sok esemény kiválasztható, jelen esetben kézzel kell elindítani a folyamatot. Így csak akkor generálódik a tartalom, ha tényleg szükséges. A futtatókörnyezet egy Ubuntu lesz, az állományok betöltése után elindul a Pandoc a megadott paraméterekkel, vagyis egy `document.docx` állományt szeretnénk kapni a folyamat végén. Ez a folyamat általában egy tömörített állományt ad eredményül, az `archive: false` kapcsolóval azt állítottam be, hogy ne tömörítsen, közvetlenül legyen hozzáférhető a végeredmény. Ez csak akkor működik, ha egy darab állományt eredményez a folyamat.
 
-Kézzel elindítva tehát az Actiont valóban kapunk egy Microsoft Word .docx formátumú állományt, amelyben az van, amit Markdownban írtunk. A fejezetcímek, ábrák, linkek a helyükön, bár minden úgy néz ki, ahogy a Word default beállításai szerint ki kell néznie. Ezen kívül a dokumentum elején általában szerepelnie kell néhány kelléknek, mint például szerző, cím, összefoglaló, a végén pedig egy irodalomjegyzéket szokás közölni.
+Az Actiont kézzel elindítva valóban kapunk egy Microsoft Word .docx formátumú állományt, amelyben az van, amit Markdownban írtunk. A fejezetcímek, ábrák, linkek a helyükön, bár minden úgy néz ki, ahogy a Word default beállításai szerint ki kell néznie. Ez a legtöbb esetben nem elegendő. Ezen kívül a dokumentum elején általában szerepelnie kell néhány kelléknek, mint például szerző, cím, összefoglaló, a végén pedig egy irodalomjegyzéket szokás közölni.
 
 ### A dokumentum formázása
 
@@ -59,7 +59,7 @@ pandoc -o custom-reference.docx --print-default-data-file reference.docx
 
 Ezt Wordben megnyitva látható, hogy minden szükséges elem szerepel benne. Ezek **stílusát** a szükségleteinknek (illetve a kéziratot fogadó előírásainak) megfelelően módosíthatjuk. Mentés után ezt is töltsük föl a repositoryba, majd egészítsük ki az Actionunkban a Pandoc paramétereit a következővel: `--reference-doc=style-reference.docx`!
 
-Ha számozott fejezetcímekre van szükség, akkor még egy paramétert meg kell adnunk: `--number-sections`. Az újonnan generált dokumentumnak most már meg kell felelnie a formai előírásoknak.
+Ha számozott fejezetcímekre van szükség, akkor még egy paramétert meg kell adnunk: `--number-sections`. Az újonnan generált dokumentumnak most már meg kell felelnie a formai előírásoknak, leszámítva azt, hogy sem szerzője, sem címe nincs, és az irodalomjegyzéket sem tartalmazza.
 
 ### Szerző és cím hozzáadása
 
@@ -70,6 +70,8 @@ author: Nyizsnyik Ferenc
 title: Dokumentumok kezelése Githubon
 abstract: |
     Ebben a cikkben a dokumnetumok kezeléséről van szó. Ehhez a Github kézenfekvő megoldást kínál.
+    
+    Ez több bekezdés is lehet.
 keywords: dokumentum, Github, Pandoc
 lang: hu-HU
 ```
@@ -117,3 +119,5 @@ jobs:
           path: document.docx
           archive: false
 ```
+
+Hatékony alkotást kívánok!
