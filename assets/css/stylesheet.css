@@ -4,15 +4,15 @@ html {
 }
 
 body {
-    background-color: #c8ffc8;
+    background-color: #7bd192;
     color: #141204;
     margin: 0px;
     padding: 0px;
 }
 
 .header {
-    background-color: #280003;
-    color: #c8ffc8;
+    background-color: #181769;
+    color: #7bd192;
     text-align: center;
     margin-top: 0px;
     margin-left: 0px;
@@ -27,7 +27,7 @@ body {
 }
 
 .content {
-    background-color: #c8ffc8;
+    background-color: #7bd192;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .nav > p {
-    background-color: #280003;
+    background-color: #181769;
     transform: skew(345deg);
     font-size: 141%;
     text-align: right;
