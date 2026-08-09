@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-    background-color: #181769;
+    background-color: #0a335c;
     color: #7bd192;
     text-align: center;
     margin-top: 0px;
@@ -38,7 +38,7 @@ body {
 }
 
 .nav > p {
-    background-color: #181769;
+    background-color: #0a335c;
     transform: skew(345deg);
     font-size: 141%;
     text-align: right;
